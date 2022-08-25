@@ -34,6 +34,8 @@ def main():
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
                 'credentials.json', SCOPES)
+            # To get credentials.json see GitHub README.md @
+            # https://developers.google.com/workspace/guides/create-credentials#desktop-app
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
         with open('token.json', 'w') as token:
